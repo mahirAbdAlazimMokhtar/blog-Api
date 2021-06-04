@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Model\Blog as ModelBlog;
-use App\Models\Models\Blog;
-
+use App\Models\Models\PostComment;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class PostCommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,10 +24,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $mahir = 'this varible to test for pass date in views ';
-        $blog = new Blog();
-        $blog->title ='hi this data come from object';
-        return view('hello',compact('mahir', 'blog'));
+        //
     }
 
     /**
@@ -46,10 +41,10 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Models\Blog  $blog
+     * @param  \App\Models\Models\PostComment  $postComment
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show(PostComment $postComment)
     {
         //
     }
@@ -57,10 +52,10 @@ class BlogController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Models\Blog  $blog
+     * @param  \App\Models\Models\PostComment  $postComment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog $blog)
+    public function edit(PostComment $postComment)
     {
         //
     }
@@ -69,10 +64,10 @@ class BlogController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Models\Blog  $blog
+     * @param  \App\Models\Models\PostComment  $postComment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, PostComment $postComment)
     {
         //
     }
@@ -80,10 +75,10 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Models\Blog  $blog
+     * @param  \App\Models\Models\PostComment  $postComment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
+    public function destroy(PostComment $postComment)
     {
         //
     }
