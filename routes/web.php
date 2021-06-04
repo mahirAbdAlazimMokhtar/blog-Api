@@ -15,12 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 //and this a old way to route in laravel
 // Route::get('hi', 'BlogController@create');
 //this new Route in laravel 8
-Route::get('/hello', [BlogController::class, 'create']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
