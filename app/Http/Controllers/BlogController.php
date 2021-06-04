@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Model\Blog as ModelBlog;
 use App\Models\Models\Blog;
+
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -24,7 +26,10 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        $mahir = 'this varible to test for pass date in views ';
+        $blog = new Blog();
+        $blog->title ='hi this data come from object';
+        return view('hello',compact('mahir', 'blog'));
     }
 
     /**
