@@ -25,5 +25,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('create-category', [CategoryController::class, 'create']);
 Route::post('post-category-form', [CategoryController::class, 'store']);
-Route::post('all-categories', [CategoryController::class, 'index']);
+Route::get('all-categories', [CategoryController::class, 'index']);
 

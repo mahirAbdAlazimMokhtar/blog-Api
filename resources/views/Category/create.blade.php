@@ -13,7 +13,7 @@
 <!-- //this to store data into CatregoryController -->
 
 
-<form action="{{URL::to('post-category-form')}}" method="post">
+<form action="{{URL::to('post-category-form')}}" method="Post">
     @csrf
   <div class="form-group">
     <label for="exampleInputEmail1">Category name</label>
