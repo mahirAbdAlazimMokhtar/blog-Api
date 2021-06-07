@@ -2,7 +2,7 @@
 @section('dashboard-content')
 
 <h1>Create Category form</h1>
-//this to store data into CategoryController
+//this to store data into CatregoryController
 <form action="{{URL::to('post-category-form')}}" method="post">
     @csrf
   <div class="form-group">
