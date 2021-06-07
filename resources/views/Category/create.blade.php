@@ -10,7 +10,9 @@
     {{Session::get('Failed')}}
     @endif
 
-//this to store data into CatregoryController
+<!-- //this to store data into CatregoryController -->
+
+
 <form action="{{URL::to('post-category-form')}}" method="post">
     @csrf
   <div class="form-group">

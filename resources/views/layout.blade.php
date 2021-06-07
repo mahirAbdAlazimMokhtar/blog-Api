@@ -65,6 +65,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
 
                         <a class="collapse-item" href="{{URL::to('create-category')}}">Create Category</a>
+                        <a class="collapse-item" href="{{URL::to('all-categories')}}">All Category</a>
 
                     </div>
                 </div>
