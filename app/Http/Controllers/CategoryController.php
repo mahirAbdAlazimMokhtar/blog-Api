@@ -38,8 +38,10 @@ class CategoryController extends Controller
         //this to save data in form Create
         $category = new Category();
         $category->name = $request->input('categoryName');
-        $category->save();
-        return $category;
+       if ( $category->save()){
+           return redirect()->back()->with('Success','Saved Successfully');
+       }
+        return redirect()->back()->with('Failed', 'Could not Save !');
 
     }
 
