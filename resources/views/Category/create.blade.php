@@ -2,6 +2,14 @@
 @section('dashboard-content')
 
 <h1>Create Category form</h1>
+
+    @if(Session::get('Success'))
+    {{Session::get('Success')}}
+    @endif
+    @if(Session::get('Failed'))
+    {{Session::get('Failed')}}
+    @endif
+
 //this to store data into CatregoryController
 <form action="{{URL::to('post-category-form')}}" method="post">
     @csrf
