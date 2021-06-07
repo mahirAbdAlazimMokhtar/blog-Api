@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return $categories;
+        return view('Category.index', compact('categories'));
     }
 
     /**
@@ -63,9 +63,10 @@ class CategoryController extends Controller
      * @param  \App\Models\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+       $category = Category::find($id);
+       return view ('category.edit',compact('category'));
     }
 
     /**
@@ -75,9 +76,15 @@ class CategoryController extends Controller
      * @param  \App\Models\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        $category->name = $request->input('categoryName');
+        if($category->save()){
+            return redirect()->back()->with('success', 'Updated Successfuly');
+        }
+         return redirect()->back()->with('failed', 'Could not Update');
+
     }
 
     /**
