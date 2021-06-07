@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,4 +23,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('hi', 'BlogController@create');
 //this new Route in laravel 8
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('create-category', [CategoryController::class, 'create']);
+Route::post('post-category-form', [CategoryController::class, 'store']);
 
